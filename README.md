@@ -17,6 +17,7 @@ Containers:
 * AlertManager (alerts management) `http://<host-ip>:9093`
 * Grafana (visualize metrics) `http://<host-ip>:3000`
 * NodeExporter (host metrics collector)
+* sensor-exporter (host sensor metrics collector)
 * cAdvisor (containers metrics collector)
 
 While Grafana supports authentication, the Prometheus and AlertManager services have no such feature. 
