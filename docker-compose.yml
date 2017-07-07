@@ -60,6 +60,17 @@ services:
     labels:
       org.label-schema.group: "monitoring"
 
+  sensor-exporter:
+    image: webvictim/sensor-exporter
+    container_name: sensorexporter
+    restart: unless-stopped
+    expose:
+      - 9255
+    networks:
+      - monitor-net
+    labels:
+      org.label-schema.group: "monitoring"
+
   cadvisor:
     image: google/cadvisor:v0.26.1
     container_name: cadvisor
