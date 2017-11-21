@@ -24,6 +24,8 @@ services:
       - '-alertmanager.url=http://alertmanager:9093'
       - '-storage.local.target-heap-size=1073741824'
       - '-storage.local.retention=200h'
+      - '-storage.local.memory-chunks=100000'
+      - '-log.level=debug'
     restart: unless-stopped
     expose:
       - 9090
